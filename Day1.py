@@ -4,11 +4,11 @@ import re
 total=0
 
 #for line in list
-for line in open('file.txt'):
+for line in open('file1.txt'):
     #get first and last int
-    digits = re.findall('([0-9])\b(?:(?:zero|one|two|three|four|five|six|seven|eight|nine)(?: +|$))', line)
-    first = str(digits[0])
-    last = str(digits[-1])
+    digits = re.findall('([0-9])', line)
+    first = digits[0]
+    last = digits[-1]
     #concate
     number=int(first+last)
     #add to total
